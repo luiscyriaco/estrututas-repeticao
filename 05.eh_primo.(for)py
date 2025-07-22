@@ -1,0 +1,25 @@
+""" 05. Faça um programa que solicite um valor ao usuário e verifique se esse valor 
+é um número primo. Utilize uma estrutura de repetição na solução deste exercício.
+"""
+# versão com comando "for"
+
+# Imprime o nome do programa
+print("Número Primo\n")
+# Solicita um número ao usuário
+numero = int(input("Informe um número para análise: "))
+# Verifica se o número é maior que 1
+if numero > 1:
+    eh_primo = True
+    # Verifica se o número é divisível por algum número de 2 até o número - 1
+    for i in range(numero - 1, 1, -1):
+        if numero % i == 0:
+            eh_primo = False
+            break
+    # Exibe se o número é primo ou não
+    if eh_primo:
+        print(f"{numero} é primo.")
+    else:
+        print(f"{numero} não é primo.")
+
+else:
+    print("Primos devem ser positivos e maiores do que um.")
